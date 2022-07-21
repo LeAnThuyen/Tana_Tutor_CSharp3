@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tana_Tutor_CSharp3", "Tana_Tutor_CSharp3\Tana_Tutor_CSharp3.csproj", "{5BA7E5F3-A2BD-46A0-85B5-7223C64C2420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buoi1", "Buoi1\Buoi1.csproj", "{9C534E68-D5A8-40A9-900E-1B1F67798773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BA7E5F3-A2BD-46A0-85B5-7223C64C2420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA7E5F3-A2BD-46A0-85B5-7223C64C2420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA7E5F3-A2BD-46A0-85B5-7223C64C2420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA7E5F3-A2BD-46A0-85B5-7223C64C2420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C534E68-D5A8-40A9-900E-1B1F67798773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C534E68-D5A8-40A9-900E-1B1F67798773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C534E68-D5A8-40A9-900E-1B1F67798773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C534E68-D5A8-40A9-900E-1B1F67798773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CEC26DA-5502-4408-A763-F3139CDC4F9B}
+	EndGlobalSection
+EndGlobal
