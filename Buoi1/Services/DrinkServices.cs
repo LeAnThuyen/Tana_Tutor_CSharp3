@@ -68,14 +68,6 @@ namespace Buoi1.Services
                 x.TenDoUong = drinksRepos.TenDoUong;
                 x.GiaDoUong = drinksRepos.GiaDoUong;
                 x.TrangThai = drinksRepos.TrangThai;
-
-
-
-
-                x.TrangThai = drinksRepos.TrangThai;
-                x.TrangThai = drinksRepos.TrangThai;
-                x.TrangThai = drinksRepos.TrangThai;
-
                 x.DungTich = drinksRepos.DungTich;
             }
 
