@@ -1,4 +1,5 @@
-﻿using EF_DatabaseFirst.Repositories;
+﻿using EF_DatabaseFirst.Context;
+using EF_DatabaseFirst.DomainClass;
 using System;
 using System.Collections.Generic;
 using System.Linq;

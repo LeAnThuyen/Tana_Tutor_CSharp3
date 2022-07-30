@@ -1,4 +1,4 @@
-﻿using EF_DatabaseFirst.Repositories;
+﻿using EF_DatabaseFirst.DomainClass;
 using EF_DatabaseFirst.Services;
 using System;
 using System.Linq;
@@ -8,6 +8,8 @@ namespace EF_DatabaseFirst
 {
     public partial class Form1 : Form
     {
+
+        //folder views này chứa các form có trong bài của em
         private DoAnServices _doAnServices;
         private Guid _getId;
         public Form1()

@@ -3,8 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace EF_DatabaseFirst.Repositories
+namespace EF_DatabaseFirst.DomainClass
 {
+
+    //folder này là nơi chứa duy nhất  các đối tượng của các em dùng trong bài
+    //và là các bảng của em trong cơ sở dữ liệu
     public partial class FoodTour
     {
         [Key]

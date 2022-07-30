@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EF_DatabaseFirst.DomainClass;
+using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace EF_DatabaseFirst.Repositories
+namespace EF_DatabaseFirst.Context
 {
     public partial class FastFoodContext : DbContext
     {

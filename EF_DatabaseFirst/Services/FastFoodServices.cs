@@ -1,71 +1,40 @@
-﻿using EF_DatabaseFirst.Repositories;
+﻿using EF_DatabaseFirst.DomainClass;
+using EF_DatabaseFirst.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace EF_DatabaseFirst.Services
 {
     public class FastFoodServices
     {
 
-        private FastFoodContext _dbContext;
-        private List<FoodTour> _lstFoods;
+        //folder service này sẽ được tầng view gọi xuống trực tiếp để sử dụng các phương thức
+        //đồng thời folder service này sẽ gọi tiếp xuống tầng Repostories để thực thi các phương thức đã thi triển
 
+        private FoodTourRepositories _foodTourRepositories;
+        private List<FoodTour> _lstFoods;
         public FastFoodServices()
         {
-            _dbContext = new FastFoodContext();
+            _foodTourRepositories = new FoodTourRepositories();
             _lstFoods = new List<FoodTour>();
-
-            GetListFoodFromDB();
         }
-
-        public List<FoodTour> GetListFoodFromDB()
+        public List<FoodTour> GetListFood()
         {
-            return _lstFoods = _dbContext.FoodTours.ToList();
+            return _lstFoods = _foodTourRepositories.GetListFoodFromDB();
         }
         public string AddFood(FoodTour foodTour)
         {
-            if (foodTour == null)
-            {
-                return "Thêm Thất Bại";
-            }
-
-            _dbContext.FoodTours.Add(foodTour);
-            _dbContext.SaveChanges();
-            return "Thêm Thành Công";
+            return _foodTourRepositories.AddFood(foodTour);
         }
         public string UpdateFood(Guid id, FoodTour foodTour)
         {
-            if (foodTour == null)
-            {
-                return "Cập nhật thất bại";
-            }
-            if (GetListFoodFromDB().Any(c => c.Id == id) == false)
-            {
-                return " Không tìm thấy đồ ăn mà bạn muốn cập nhật";
-            }
-            foreach (FoodTour x in GetListFoodFromDB().Where(c => c.Id == id))
-            {
-                x.TenMonAn = foodTour.TenMonAn;
-                x.TrangThai = foodTour.TrangThai;
-                _dbContext.FoodTours.Update(x);
-                _dbContext.SaveChanges();
-            }
 
-
-            return "Cập nhật Thành Công";
+            return _foodTourRepositories.UpdateFood(id, foodTour);
         }
         public string DeleteFood(Guid? id)
         {
-            if (GetListFoodFromDB().Any(c => c.Id == id) == false)
-            {
-                return " Không tìm thấy đồ ăn mà bạn muốn xóa";
-            }
-            var food = GetListFoodFromDB().Find(c => c.Id == id);
-            _dbContext.FoodTours.Remove(food);
-            _dbContext.SaveChanges();
-
-            return "Xóa Thành Công";
+            return _foodTourRepositories.DeleteFood(id);
         }
+
     }
 }
