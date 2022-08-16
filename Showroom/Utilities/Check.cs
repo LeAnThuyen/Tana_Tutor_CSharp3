@@ -18,6 +18,11 @@ namespace Showroom.Utilities
         }
         public bool CheckRong(string tenxe, string hangxe, string giaxe)
         {
+            if (string.IsNullOrWhiteSpace(tenxe))
+            {
+                return false;
+            }
+            //anh thuyen dep tra
             // hàm string.IsNullOrEmpty giúp các em kiểm tra 1 xem 1 chuỗi kí tự em truyền vào có bị null hoặc rỗng hay không 
             //nếu dữ liệu truyền vào là rỗng hoặc bị null thì lập tức sẽ trả về true và ngược lại
             if (string.IsNullOrEmpty(tenxe))
